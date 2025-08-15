@@ -2,3 +2,13 @@
 /node_modules
 /.zig-cache
 /zig-out
+.idea
+.DS_Store
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work

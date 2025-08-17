@@ -15,13 +15,13 @@ export const TokenType = {
   Let: "LET",
 } as const;
 
-type TokenItem = keyof typeof TokenType;
+type TokenItem = (typeof TokenType)[keyof typeof TokenType];
 
 export type Token = {
   kind: TokenItem;
   literal: string;
 };
 
-export function createToken(kind: TokenItem, literal: string) {
+export function createToken(kind: TokenItem, literal: string): Token {
   return { kind, literal };
 }
